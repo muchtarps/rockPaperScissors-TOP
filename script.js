@@ -39,8 +39,19 @@ jika 1 Rock, 2 Paper, 3 Scissors. return
 //1 Rock
 //2 Paper
 //3 Scissors
-function getHumanChoice(hChoice) {
+function getHumanChoice() {
+    const hChoice = prompt("Choose 1, 2 or 3");
 
+    if (hChoice === 1){
+		//1
+		console.log("Rock")
+	} else if (hChoice === 2) {
+		//2
+		console.log("Paper")
+	} else {
+		//3
+		console.log("Scissor")
+	}
 }
 
 
@@ -89,3 +100,5 @@ Your game will play 5 rounds. You will write a function named playGame that call
 - Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
 - If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
 */
+getComputerChoice();
+getHumanChoice();
