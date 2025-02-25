@@ -65,7 +65,7 @@ function playGame() {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
         console.log(`Computer chose: ${computerChoice}`);
-        alert(playRound(humanChoice, computerChoice));
+        (playRound(humanChoice, computerChoice));
 		console.log(`Human: ${humanScore} Comp: ${computerScore}`);
     }
 }
