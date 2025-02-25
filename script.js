@@ -1,4 +1,5 @@
 /*
+DONE
 Step 2: Write the logic to get the computer choice
 - Create a new function named getComputerChoice.
 - Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
@@ -11,13 +12,16 @@ function getComputerChoice(){
 
 	if (comp === 1){
 		//1
-		console.log("Rock")
+		console.log("rock")
+		return "rock";
 	} else if (comp === 2) {
 		//2
-		console.log("Paper")
+		console.log("paper")
+		return "paper";
 	} else {
 		//3
-		console.log("Scissor")
+		console.log("scissor")
+		return "scissor";
 	}
 }
 
@@ -41,17 +45,21 @@ jika 1 Rock, 2 Paper, 3 Scissors. return
 //3 Scissors
 function getHumanChoice() {
     const hChoice = prompt("Choose 1, 2 or 3");
+	const lowerChoice = hChoice.toLowerCase();
+	return console.log(lowerChoice);
+	// return lowerChoice;
 
-    if (hChoice === 1){
-		//1
-		console.log("Rock")
-	} else if (hChoice === 2) {
-		//2
-		console.log("Paper")
-	} else {
-		//3
-		console.log("Scissor")
-	}
+
+    // if (hChoice === 1){
+	// 	//1
+	// 	console.log("rock")
+	// } else if (hChoice === 2) {
+	// 	//2
+	// 	console.log("paper")
+	// } else {
+	// 	//3
+	// 	console.log("scissor")
+	// }
 }
 
 
