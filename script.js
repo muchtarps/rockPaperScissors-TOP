@@ -96,10 +96,11 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 */
+const humanSelection = getHumanChoice();
+	const computerSelection = getComputerChoice();
 
 function playRound(humanSelection, computerSelection) {
-	const humanSelection = getHumanChoice();
-	const computerSelection = getComputerChoice();
+	
 	/*
 	human - paper
 		comp - paper - seri
