@@ -44,9 +44,9 @@ jika 1 Rock, 2 Paper, 3 Scissors. return
 //2 Paper
 //3 Scissors
 function getHumanChoice() {
-    const hChoice = prompt("Choose 1, 2 or 3");
+    const hChoice = prompt("Insert your choice (rock, paper or scissor)");
 	const lowerChoice = hChoice.toLowerCase();
-	return console.log(lowerChoice);
+	return lowerChoice;
 	// return lowerChoice;
 
 
@@ -66,6 +66,8 @@ function getHumanChoice() {
 
 
 /*
+DONE
+
 Step 4: Declare the players score variables
 - Create two new variables named humanScore and computerScore in the global scope.
 - Initialize those variables with the value of 0.
@@ -95,6 +97,56 @@ const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 */
 
+function playRound(humanSelection, computerSelection) {
+	const humanSelection = getHumanChoice();
+	const computerSelection = getComputerChoice();
+	/*
+	human - paper
+		comp - paper - seri
+		comp - scissor - menang
+		comp - rock - kalah
+	human - rock
+	human - scissor
+	*/
+	if (humanSelection==="paper") {
+		if (computerSelection==="paper"){
+			return console.log("Seri");
+		} else if (computerSelection==="rock") {
+			console.log("Menang");
+			return humanScore++;
+		} else if (computerSelection==="scissor") {
+			console.log("Kalah");
+			return computerScore++;
+		} else {
+			return "Input salah";
+		}
+	} else if (humanSelection==="rock") {
+		if (computerSelection==="paper"){
+			console.log("Kalah");
+			return computerScore++;
+		} else if (computerSelection==="rock") {
+			return console.log("Seri");
+		} else if (computerSelection==="scissor") {
+			console.log("Menang");
+			return humanScore++;
+		} else {
+			return "Input salah";
+		}
+	} else if (humanSelection==="scissor") {
+		if (computerSelection==="paper"){
+			console.log("Menang");
+			return humanScore++;
+		} else if (computerSelection==="rock") {
+			console.log("Kalah");
+			return computerScore++;
+		} else if (computerSelection==="scissor") {
+			return console.log("Seri");
+		} else {
+			return "Input salah";
+		}
+	}
+}
+
 
 
 
@@ -108,5 +160,9 @@ Your game will play 5 rounds. You will write a function named playGame that call
 - Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
 - If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
 */
-getComputerChoice();
-getHumanChoice();
+
+
+
+
+// getComputerChoice();
+// getHumanChoice();
