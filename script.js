@@ -80,6 +80,8 @@ let computerScore = 0;
 
 
 /*
+DONE
+
 Step 5: Write the logic to play a single round
 Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 - Create a new function named playRound.
@@ -96,57 +98,53 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 */
-const humanSelection = getHumanChoice();
-	const computerSelection = getComputerChoice();
 
 function playRound(humanSelection, computerSelection) {
-	
-	/*
-	human - paper
-		comp - paper - seri
-		comp - scissor - menang
-		comp - rock - kalah
-	human - rock
-	human - scissor
-	*/
 	if (humanSelection==="paper") {
 		if (computerSelection==="paper"){
-			return console.log("Seri");
+			return console.log("Match draw! Both choose paper");
 		} else if (computerSelection==="rock") {
-			console.log("Menang");
+			console.log("You win! Paper beats Rock");
 			return humanScore++;
 		} else if (computerSelection==="scissor") {
-			console.log("Kalah");
+			console.log("You lose! Scissor beats Paper");
 			return computerScore++;
 		} else {
 			return "Input salah";
 		}
 	} else if (humanSelection==="rock") {
 		if (computerSelection==="paper"){
-			console.log("Kalah");
+			console.log("You lose! Paper beats Rock");
 			return computerScore++;
 		} else if (computerSelection==="rock") {
-			return console.log("Seri");
+			return console.log("Match draw! Both choose Rock");
 		} else if (computerSelection==="scissor") {
-			console.log("Menang");
+			console.log("You win! Rock beats Scissor");
 			return humanScore++;
 		} else {
 			return "Input salah";
 		}
 	} else if (humanSelection==="scissor") {
 		if (computerSelection==="paper"){
-			console.log("Menang");
+			console.log("You win! Scissor beats Paper");
 			return humanScore++;
 		} else if (computerSelection==="rock") {
-			console.log("Kalah");
+			console.log("You lose! Rock beats Scissor");
 			return computerScore++;
 		} else if (computerSelection==="scissor") {
-			return console.log("Seri");
+			return console.log("Match draw! Both choose Scissor");
 		} else {
 			return "Input salah";
 		}
 	}
 }
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+console.log(humanScore);
+console.log(computerScore);
 
 
 
